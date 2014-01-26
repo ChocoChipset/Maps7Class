@@ -25,7 +25,9 @@ const MKCoordinateSpan kSpan = {0.0005, 0.0005};
     
     [self.mapView setRegion:MKCoordinateRegionMake(kCoordinateParis,
                                                    kSpan)
-                   animated:YES];
+                   animated:NO];
+    
+
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
