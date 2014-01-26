@@ -388,6 +388,7 @@
 				GCC_PREFIX_HEADER = "MKMapCameraExample/MKMapCameraExample-Prefix.pch";
 				INFOPLIST_FILE = "MKMapCameraExample/MKMapCameraExample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -401,6 +402,7 @@
 				GCC_PREFIX_HEADER = "MKMapCameraExample/MKMapCameraExample-Prefix.pch";
 				INFOPLIST_FILE = "MKMapCameraExample/MKMapCameraExample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -466,6 +468,7 @@
 				3A57E54C189590E30012FAED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3A57E54D189590E30012FAED /* Build configuration list for PBXNativeTarget "MKMapCameraExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +477,7 @@
 				3A57E54F189590E30012FAED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
