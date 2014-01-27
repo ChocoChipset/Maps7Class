@@ -23,11 +23,18 @@ const MKCoordinateSpan kSpan = {0.0005, 0.0005};
 - (void)viewDidLoad
 {
     
-    [self.mapView setRegion:MKCoordinateRegionMake(kCoordinateParis,
-                                                   kSpan)
-                   animated:NO];
+    self.mapView.showsBuildings = YES;
+    self.mapView.showsPointsOfInterest = YES;
+    self.mapView.mapType = MKMapTypeStandard;
     
-
+    MKMapCamera *newCamera = [MKMapCamera camera];
+    newCamera.centerCoordinate = kCoordinateParis;
+    newCamera.heading = -60;
+    newCamera.altitude = 1000;
+    
+    newCamera.pitch = 40;
+    
+    [self.mapView setCamera:newCamera animated:YES];
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.

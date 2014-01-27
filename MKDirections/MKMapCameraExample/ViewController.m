@@ -54,7 +54,6 @@ const MKCoordinateSpan kSpan = {0.0005, 0.0005};
     // Define the ending point for routing direction
     request.destination = destination;
     
-    // Define if your app wants multiple routes
     // when they are available
     
     // Initialize directions object MKDirections
@@ -64,10 +63,12 @@ const MKCoordinateSpan kSpan = {0.0005, 0.0005};
     // Finally, calculate the directions
     [directions calculateDirectionsWithCompletionHandler:
      ^(MKDirectionsResponse *response, NSError *error) {
-         MKRoute *route = response.routes[0];
-         [self.mapView addOverlay:route.polyline];
-         NSLog(@"%@", route.steps);
-         
+         if (!error && response)
+         {
+             MKRoute *route = response.routes[0];
+             [self.mapView addOverlay:route.polyline];
+             NSLog(@"%@", route.steps);
+         }
          
      }];
     
